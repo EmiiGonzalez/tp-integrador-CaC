@@ -1,0 +1,28 @@
+.btn-amarillo{
+ background-color: rgb(255, 193, 7);
+}
+.btn-amarillo:hover{
+    background-color: rgb(255, 156, 7);
+    color: white;
+}
+.btn-celeste{
+    background-color: rgb(13, 202, 240);
+}
+.btn-celeste:hover{
+    background-color: rgb(13, 157, 240);
+    color: white;
+}
+.btn-gris{
+    background-color: rgb(102, 117, 125);
+    color: white;
+}
+.btn-gris:hover{
+    background-color: rgb(59, 66, 70);
+}
+.btn-rojo{
+    background-color: rgb(220, 53, 69);
+    color: white;
+}
+.btn-rojo:hover{
+    background-color: rgb(173, 40, 54);
+}

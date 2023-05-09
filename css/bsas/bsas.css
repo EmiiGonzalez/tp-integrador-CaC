@@ -1,0 +1,10 @@
+.bsas-contenido{
+    width: 50%;
+    display: inline-block;
+}
+.gray-background {
+    background-color: gray; 
+}
+.bsas-imagen{
+    width: 100%;
+}

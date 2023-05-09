@@ -1,0 +1,31 @@
+.color-navBar{
+    background-color: rgb(53, 58, 64);
+}
+.navBar-logo{
+    height: 30px;
+    min-height: 20px;
+    min-width: 20px;
+}
+.texto-color-especial{
+    color: white;
+}
+.texto-color-especial:hover{
+    color: white;
+}
+.nav-item a{
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+.active{
+    color: white!important;
+}
+.tickets-color{
+    color: rgb(41, 156, 65) ;
+}
+.nav-color-link{
+    color: rgb(153, 152, 132);
+}
+.nav-color-link:hover{
+    color: rgb(153, 152, 132);
+}

@@ -1,0 +1,49 @@
+.imagen-carrusel{
+    height: 94vh;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.texto-principal{
+    width: 50%;
+    min-width: 20%;
+}
+.texto-carrusel{
+    top: 65%;
+    left: 70%;
+}
+.carrusel-texto-contenido{
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: .1px;
+    -webkit-text-stroke-color: black;
+}
+.btn-color-verde{
+    background-color: rgb(41, 167, 68);
+    color: white;
+}
+.btn-color-verde:hover{
+    background-color: rgb(22, 99, 48);
+    color: white;
+}
+@media (max-width: 480px) {
+    .texto-carrusel{
+        top: 50%;
+        left: 60%;
+    }
+    .texto-principal{
+        width: 50%;
+        min-width: 20%;
+    }
+    .texto-carrusel p {
+        font-size: .9rem;
+    }
+    .btn-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    .btn-container button{
+        padding: 0;
+        margin-left: 10px;
+        text-align: center;
+
+    }
+  }

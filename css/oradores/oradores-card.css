@@ -1,0 +1,8 @@
+.orador{
+    min-width: 230px;
+}
+.imagen-card{
+    height: 250px;
+    object-fit: cover;
+    object-position: 0 30%;
+}
