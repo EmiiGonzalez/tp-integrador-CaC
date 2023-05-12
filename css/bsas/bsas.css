@@ -1,10 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .bsas-contenido{
     width: 50%;
     display: inline-block;
 }
+.bsas-imagen{
+    background:center no-repeat url("../../imagenes/honolulu.jpg");
+}
 .gray-background {
     background-color: gray; 
 }
-.bsas-imagen{
-    width: 100%;
+.bsas-texto{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+@media (min-width:961px){
+    .bsas-texto{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 767.5px){
+    .bsas-contenedor{
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    }
+    .bsas-contenido{
+        width: 100vw;
+    }
+}
+@media (max-width: 600px){
+    .bsas-texto{
+        font-size: 1rem !important;
+    }
 }
