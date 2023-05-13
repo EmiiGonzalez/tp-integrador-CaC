@@ -193,13 +193,14 @@
         <form action="">
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" required data-tipo="nombre">
-            <span class="input-message-error">Este campo es obligatorio</span>
+            <input type="text" class="form-control" id="nombre" minlength="3" maxlength="25" required data-tipo="nombre" >
+            <span></span>
           </div>
           <div class="mb-3">
             <label for="email" class="form-label" >Correo electrónico</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com" required pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" data-tipo="email">
-            <span class="input-message-error">Este campo es obligatorio</span>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" required data-tipo="email">
+            <span></span>
+            
           </div>
           <div class="mb-3">
             <textarea class="form-control" id="comentario" rows="3" placeholder="Deje su comentarios"></textarea>
