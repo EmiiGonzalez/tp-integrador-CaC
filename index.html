@@ -190,24 +190,28 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="">
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" minlength="3" maxlength="25" required data-tipo="nombre" >
+        <form action="" id="formulario">
+          <div class="mb-3" >
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" minlength="3" maxlength="25" name="nombre" data-tipo="nombre" >
             <span></span>
           </div>
           <div class="mb-3">
-            <label for="email" class="form-label" >Correo electrónico</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com" required data-tipo="email">
+            <label for="email" class="form-label" >Correo electrónico:</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" data-tipo="email">
             <span></span>
             
           </div>
           <div class="mb-3">
             <textarea class="form-control" id="comentario" rows="3" placeholder="Deje su comentarios"></textarea>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+          <div class="modal-footer d-flex  justify-content-between">
+            <span class="mensaje" data-="mensaje"></span>
+            <div class="d-flex justify-content-around">
+              <button type="button" class="btn btn-secondary mx-1" data-bs-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary mx-1">Enviar</button>
+            </div>
+          </div>
         </form>
       </div>
 

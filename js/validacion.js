@@ -1,39 +1,40 @@
-export const validar = (input) =>{
-    const elemento = input.target;
-    const valorElemento = elemento.value.trim().length;
-    const largoBoolean = valorElemento >= 3 && valorElemento <= 25
-    const tipoDeInput = elemento.dataset.tipo;
-    const span = elemento.nextElementSibling;
-    console.log(elemento.validity.valid && largoBoolean);
-    if(elemento.validity.valid && largoBoolean){
-        elemento.classList.remove("campo-error")
-        span.classList.remove("error")
-        span.innerText  = "";
-    }else {
-        elemento.classList.add("campo-error")
-        span.classList.add("error")
-        span.innerText  = mostrarMensajeDeError(tipoDeInput, elemento);
-    }
-}
-
-const tipoDeErrores = ["valueMissing", "typeMismatch"];
-
-const mensajesDeError = {
-    nombre: {
-        valueMissing: "El campo nombre no puede estar vacio",
-    },
-    email: {
-        valueMissing: "El campo correo no puede estar vacio",
-        typeMismatch: "El formato del correo no es valido"
-    }
+const expresiones = {
+  nombre: {
+    regex: /^[a-zA-ZÀ-ÿ\s]{4,40}$/, // Letras y espacios, pueden llevar acentos.
+    mensaje: "Por favor, introduce solo caracteres alfabéticos.",
+  },
+  email: {
+    regex: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    mensaje: "Ingrese una dirección de correo electrónico válida",
+  },
 };
 
-const mostrarMensajeDeError = (tipoDeInput, input) =>{
-    let mensaje = "";
-    tipoDeErrores.forEach(error => {
-        if (input.validity[error]){
-            mensaje = mensajesDeError[tipoDeInput][error]
-        }
-    })   
-    return mensaje;
-}
+export const campos = {
+  nombre: false,
+  email: false,
+};
+
+export const validarFormulario = (e) => {
+  const elemento = e.target;
+  const tipoDeInput = elemento.dataset.tipo;
+  const inputValue = elemento.value.trim();
+  const label = elemento.previousElementSibling;
+  const span = elemento.nextElementSibling;
+  const mensaje = expresiones[tipoDeInput].mensaje;
+
+  if (expresiones[tipoDeInput].regex.test(inputValue)) {
+    elemento.classList.remove("campo-error");
+    span.classList.remove("text-error");
+    label.classList.remove("text-error");
+    elemento.classList.add("campo-succes");
+    span.innerText = "";
+    campos[tipoDeInput] = true;
+  } else {
+    elemento.classList.remove("campo-succes");
+    elemento.classList.add("campo-error");
+    span.classList.add("text-error");
+    label.classList.add("text-error");
+    span.innerText = mensaje;
+    campos[tipoDeInput] = false;
+  }
+};

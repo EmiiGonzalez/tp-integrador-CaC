@@ -1,8 +1,28 @@
-.campo-error{
-    border: solid 1px red;
-    box-shadow: 0 0 1px red;
+.campo-error {
+  border: solid 1px #bb2929;
+  box-shadow: 0 0 1px #bb2929;
 }
-.error{
-    color: red;
-    display: block;
+.campo-succes {
+  border: solid 1px #1ed12d;
+  box-shadow: 0 0 1px #1ed12d;
+}
+.text-error {
+  color: #bb2929;
+}
+.text-succes {
+  color: #23742a;
+}
+.error {
+  color: #bb2929;
+  display: block;
+}
+.success {
+  color: #1ed12d;
+  display: block;
+}
+.form-succes {
+  color: #1ed12d;
+}
+.mensaje {
+  font-size: 1.04rem;
 }
