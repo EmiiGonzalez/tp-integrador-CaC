@@ -23,9 +23,22 @@
 .tickets-color{
     color: rgb(41, 156, 65) ;
 }
+.tickets-color:visited{
+    color: rgb(41, 156, 65) ;
+}
+.nav-color-orador{
+    color: #008781;
+}
+.nav-color-orador:visited{
+    color: #008781;
+}
 .nav-color-link{
     color: rgb(153, 152, 132);
 }
-.nav-color-link:hover{
-    color: rgb(153, 152, 132);
+.nav-color-link:hover, .link-modal:hover{
+    color: rgb(236, 230, 103);
+}
+
+.sticky{
+    border-bottom: .1rem solid rgb(0, 0, 0, .2);
 }

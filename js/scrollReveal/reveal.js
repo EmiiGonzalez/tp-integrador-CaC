@@ -2,8 +2,8 @@ export const revelar = () =>{
 
     ScrollReveal({ 
         distance: "80px",
-        duration: 1000,
-        delay: 100
+        duration: 1500,
+        delay: 150
     });
     
     ScrollReveal().reveal('#cabecera', { origin: "top" });
