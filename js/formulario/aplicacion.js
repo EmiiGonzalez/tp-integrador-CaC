@@ -33,7 +33,8 @@ export const valFormApp = () => {
       setTimeout(() => {
         mensaje.classList.remove("text-succes");
         mensaje.innerText = "";
-      }, 5000);
+        document.querySelector('[data-bs-dismiss="modal"]').click();
+      }, 1500);
     } else {
       mensaje.innerText = "Complete correctamente los campos";
       mensaje.classList.add("text-error");
