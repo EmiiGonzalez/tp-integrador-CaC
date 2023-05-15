@@ -5,3 +5,4 @@ import { scrollControl } from "./navBarActive/scroll.js";
 valFormApp(); //validacion del formulario
 revelar(); //animaciones para revelar
 scrollControl();
+

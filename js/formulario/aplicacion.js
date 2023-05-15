@@ -3,6 +3,8 @@ import { campos } from "./validacion.js";
 
 const formulario = document.getElementById("formulario");
 const inputs = document.querySelectorAll("input");
+const toast = document.getElementById("liveToast");
+const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toast)
 
 
 const resetFormulario = () => {
@@ -28,13 +30,11 @@ export const valFormApp = () => {
       formulario.reset();
       resetFormulario();
   
-      mensaje.classList.add("text-succes");
-      mensaje.innerText = "Contacto enviado con exito!";
-      setTimeout(() => {
-        mensaje.classList.remove("text-succes");
-        mensaje.innerText = "";
-        document.querySelector('[data-bs-dismiss="modal"]').click();
-      }, 1500);
+      document.querySelector(".toast-body").innerText = "Contacto enviado con exito!"
+      mensaje.innerText = "";
+      document.querySelector('[data-bs-dismiss="modal"]').click();
+      toastBootstrap.show()
+
     } else {
       mensaje.innerText = "Complete correctamente los campos";
       mensaje.classList.add("text-error");
